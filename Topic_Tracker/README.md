@@ -1,9 +1,10 @@
 ***TOPIC TRACKER***
+<b><Note:</b> The links here will not work.
 
 **What is it?**
 
-Topic Tracker is aimed at keeping track of what is being read or talked about most in the lab. 
-It accepts url links in the form of JSON with "Content-Type: application/json". 
+Topic Tracker is aimed at keeping track of what is being read or talked about most in the lab.
+It accepts url links in the form of JSON with "Content-Type: application/json".
 Typical JSON file will look like this:
 
 {"url":"http://www.zephoria.org/thoughts/archives/2014/07/09/alice-goffman-on-the-run.html"}
@@ -12,7 +13,7 @@ Typical JSON file will look like this:
 
 **How does it work?**
 
-It uses LDA Model by David Blei implemented in Gensim Library of Python. It is coded in Python 2.7. 
+It uses [LDA](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) implemented in [gensim](https://radimrehurek.com/gensim/).
 
 0. User sends in the url through (A) below
 1. beanstalk is used to handle queue of urls
@@ -20,7 +21,7 @@ It uses LDA Model by David Blei implemented in Gensim Library of Python. It is c
 3. dictionary is formed with text as the urls are being added
 4. after first 25 urls LDA Model is trained and stats about number of topics are send to Redis
 5. after every 25 urls thereafter stats are computed on accumulated corpus (corpus is just the accumulation of all text) and send to Redis
-6. after every 100 urls LDA Model is retrained and stats 
+6. after every 100 urls LDA Model is retrained and stats
 7. On the other end stats can be viewed through (B) below
 
 
