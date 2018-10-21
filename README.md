@@ -14,7 +14,7 @@ You can view it in use [here](http://nytlabs.com/projects/editor.html):
 <br>
 <a href="http://nytlabs.com/projects/editor.html"><img src="./misc/editor.png" align="middle"></a>
 
-## Repository Description
+## Repository Description
 <b><i>linguo</i></b> is a set of [microservices](https://en.wikipedia.org/wiki/Microservices) that provide Natural Language Processing abilities for text editors.  
 
 <b>Note</b>: Most of the problems have been well researched since 2014, so there are better libraries available to perform the same task. The libraries like [goose](https://github.com/grangier/python-goose) and [reporter](https://pypi.python.org/pypi/reporter/0.1.2) are some of the other libraries.
